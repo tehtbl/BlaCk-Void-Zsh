@@ -4,7 +4,7 @@
 ## == Powerlevel10k Set ========================================================
 ## -- Theme Mode ---------------------------------------------------------------
 # Theme Mode: auto powerline simple powerline-single simple-single | TODO: normal normal-single
-export BVZSH_THEME="${BVZSH_THEME:=auto}"
+export BVZSH_THEME="${BVZSH_THEME:=powerline}"
 
 # Color Mode: auto fixed flex
 export BVZSH_COLOR="${BVZSH_COLOR:=auto}"
@@ -415,9 +415,13 @@ _simple-icon()
 ## ETC Prompt Expansion
 # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
 
+# ENV_PROMPT_ELEMENTS=(direnv virtualenv anaconda pyenv goenv nodenv nvm nodeenv
+#                      rbenv rvm fvm lauaenv jenv plenv kubecontext terrafrom
+#                      aws aws_eb_env azure gcloud google_app_cred)
+
 ENV_PROMPT_ELEMENTS=(direnv virtualenv anaconda pyenv goenv nodenv nvm nodeenv
-                     rbenv rvm fvm lauaenv jenv plenv kubecontext terrafrom
-                     aws aws_eb_env azure gcloud google_app_cred)
+                    rbenv rvm fvm lauaenv jenv plenv kubecontext terrafrom)
+
 
 _powerline-nerd()
 {
