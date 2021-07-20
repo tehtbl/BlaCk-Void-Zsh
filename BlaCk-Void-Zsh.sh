@@ -77,7 +77,7 @@ pip_install()
   if ! [ -x "$(command -v pip3)" ]; then
     curl https://bootstrap.pypa.io/get-pip.py | sudo python3
   fi
-  sudo pip3 install "${PIP_PACKAGE_NAME[@]}"
+  echo 'sudo pip3 install "${PIP_PACKAGE_NAME[@]}"'
 }
 etc_install()
 {
@@ -143,8 +143,9 @@ if   [[ "$OSTYPE" == "linux-gnu" ]]; then
     fi
   fi
 elif [[ "$OSTYPE" == "darwin"*  ]]; then
-  set_brew
-  mac_install
+  # set_brew
+  # mac_install
+  echo "install disabled"
 elif [[ "$OSTYPE" == "FreeBSD"* ]]; then
   pacapt_install
   bsd_install
